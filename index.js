@@ -8,7 +8,7 @@ function createPost(){
   let body = document.getElementById('body').value;
   let author = document.getElementById('author').value;
 
-  debugger
+  
 
   //add page html to main
   document.querySelector('main').innerHTML += pageTemplate();
@@ -21,7 +21,7 @@ function createPost(){
   //add values to be interpolated by postTemplate function and get a string of dynamic HTML
   let postHTML = postTemplate({'title': title, 'body': body, 'author': author});
 
-
+  debugger
 
 
 
