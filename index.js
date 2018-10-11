@@ -20,13 +20,13 @@ function createPost(){
 
   //create comments section
   let commentsSection = commentsTemplate();
-  debugger
+  
 
   //add the dynamically generated postHTML to postElement
   postElement.innerHTML += postHTML;
 
   //add the comments section to footer of post
-  postElement.getElementsByTagName('footer')[0].innerHTML = commentsSection;
+  postElement.getElementsByTagName('footer')[0].innerHTML += commentsSection;
 
 }
 
