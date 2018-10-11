@@ -18,7 +18,7 @@ function createPost(){
 
   //add values to be interpolated by postTemplate function and get a string of dynamic HTML
   let postHTML = postTemplate({'title': title, 'body': body, 'author': author});
-  
+
   debugger
 
 
@@ -27,5 +27,5 @@ function createPost(){
 }
 
 function postComment(){
-  let comment =
+
 }
