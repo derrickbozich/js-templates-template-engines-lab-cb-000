@@ -2,6 +2,7 @@ function createPost(){
   //create template functions
   let pageTemplate = _.template(document.getElementById("page-template").innerHTML);
   let postTemplate = _.template(document.getElementById("post-template").innerHTML);
+  let commentsTemplate = _.template(document.getElementById("comments-template").innerHTML);
 
   //get post values
   let title = document.getElementById('title').value;
