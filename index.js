@@ -8,18 +8,17 @@ function createPost(){
   let body = document.getElementById('body').value;
   let author = document.getElementById('author').value;
 
-  
-
-  //add page html to main
+  //add pageTemplate html to main (which only has a form initially)
   document.querySelector('main').innerHTML += pageTemplate();
 
   //get element to attach post HTML to
   let postElement = document.getElementById('post')
 
-
-
   //add values to be interpolated by postTemplate function and get a string of dynamic HTML
   let postHTML = postTemplate({'title': title, 'body': body, 'author': author});
+
+  //add the dynamically generated postHTML to postElement
+  postElement.innerHTML += postHTML;
 
   debugger
 
