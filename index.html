@@ -9,6 +9,12 @@
         Title: <input type="text" id="title"><br>
         Author: <input type="text" id="author"><br>
         Post: <input type="text" id="body"><br>
+        <input type="submit"><br>
+      </form>
+
+      <form onsubmit="postComment();return false;">
+        Name: <input type="text" id="commenter"><br>
+        Comment: <input type="text" id="comment"><br>
         <input type="submit">
       </form>
     </main>
@@ -16,11 +22,7 @@
     <script src="index.js"></script>
     <script id="comments-template" type="text/x-lodash-template">
       <div id="comments">
-        <form onsubmit="postComment();return false;">
-          Name: <input type="text" id="commenter"><br>
-          Comment: <input type="text" id="comment"><br>
-          <input type="submit">
-        </form>
+
       </div>
     </script>
     <script id="comment-template" type="text/x-lodash-template">
