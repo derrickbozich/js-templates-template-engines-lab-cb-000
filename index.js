@@ -14,11 +14,13 @@ function createPost(){
   //get element to attach post HTML to
   let postElement = document.getElementById('post')
 
-  //add values to be interpolated by postTemplate function and get a string of dynamic HTML
+  //add values to be interpolated by postTemplate function and get a string of dynamic HTML for post
   let postHTML = postTemplate({'title': title, 'body': body, 'author': author});
 
   //add the dynamically generated postHTML to postElement
   postElement.innerHTML += postHTML;
+
+
 
   debugger
 
@@ -28,5 +30,21 @@ function createPost(){
 }
 
 function postComment(){
+  //create template function to create a comment skeleton to add values to later
+  let commentTemplate = _.template(document.getElementById('comment-template').innerHTML);
+
+  //get comment values
+  let comment = document.getElementById('comment').value;
+  let commenter = document.getElementById('commenter').value;
+
+  //dynamically create a comment
+  let commentHTML = commentTemplate({'comment': comment, 'commenter': commenter});
+
+  //get element to add commentHTML to
+  let commentsElement = document.getElementById('comments')
+
+  //add commentHTML to commentsElement
+  commentsElement.innerHTML += commentHTML;
+
 
 }
