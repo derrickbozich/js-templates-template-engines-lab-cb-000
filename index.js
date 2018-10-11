@@ -20,6 +20,7 @@ function createPost(){
 
   //create comments section
   let commentsSection = commentsTemplate();
+  debugger
 
   //add the dynamically generated postHTML to postElement
   postElement.innerHTML += postHTML;
