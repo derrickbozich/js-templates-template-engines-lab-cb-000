@@ -15,11 +15,19 @@ function createPost(){
   //get element to attach post HTML to
   let postElement = document.getElementById('post')
 
-  //add values to be interpolated by postTemplate function and get a string of dynamic HTML for post
+  //add values to be interpolated by postTemplate function and generate dynamic HTML for a post
   let postHTML = postTemplate({'title': title, 'body': body, 'author': author});
+
+  //create comments section
+  let commentsSection = commentsTemplate();
 
   //add the dynamically generated postHTML to postElement
   postElement.innerHTML += postHTML;
+
+  //add the comments section to footer of post
+  postElement.getElementsByTagName('footer').innerHTML = commentsSection;
+
+  debugger
 
 
 
