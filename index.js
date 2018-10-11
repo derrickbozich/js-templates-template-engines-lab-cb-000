@@ -26,7 +26,7 @@ function createPost(){
   postElement.innerHTML += postHTML;
 
   //add the comments section to footer of post
-  postElement.getElementsByTagName('footer').innerHTML = commentsSection;
+  postElement.getElementsByTagName('footer')[0].innerHTML = commentsSection;
 
 }
 
