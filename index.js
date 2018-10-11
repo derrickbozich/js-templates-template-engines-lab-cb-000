@@ -11,15 +11,15 @@ function createPost(){
   //add page html to main
   document.querySelector('main')[0].innerHTML += pageTemplate();
 
-  //get element to attach postHTML to
+  //get element to attach post HTML to
   let postElement = document.getElementById('post')
+
+
 
   //add values to be interpolated by postTemplate function and get a string of dynamic HTML
   let postHTML = postTemplate({'title': title, 'body': body, 'author': author});
-
-  let pageTemplateFn = _.template(pageTemplate);
-  let pageHTML = pageTemplateFn({post: postHTML});
-
+  
+  debugger
 
 
 
